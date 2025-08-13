@@ -1,5 +1,24 @@
 # Nuxt Minimal Starter
 
+## Cloudflare Workers (Nuxt 3 + Nitro cloudflare preset)
+
+**Local:**
+
+```bash
+pnpm install
+pnpm build     # builds with --preset=cloudflare -> .output/*
+npx wrangler dev
+```
+
+**Deploy:**
+
+```bash
+# Requires CLOUDFLARE_API_TOKEN and CLOUDFLARE_ACCOUNT_ID set (locally or in CI)
+pnpm deploy
+```
+
+CI: Push to `main` triggers `.github/workflows/deploy.yml`.
+
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
