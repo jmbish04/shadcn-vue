@@ -1,43 +1,11 @@
 {
-  "name": "shadcn-vue",
-  "type": "module",
   "private": true,
+  "engines": { "node": ">=22" },
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "typecheck": "vue-tsc -b"
-  },
-  "dependencies": {
-    "@internationalized/date": "catalog:",
-    "@nuxt/fonts": "0.11.0",
-    "@tailwindcss/vite": "^4.1.7",
-    "@tanstack/vue-table": "^8.21.3",
-    "@unovis/ts": "^1.5.2",
-    "@unovis/vue": "^1.5.2",
-    "@vee-validate/zod": "catalog:",
-    "@vueuse/core": "catalog:",
-    "class-variance-authority": "catalog:",
-    "clsx": "catalog:",
-    "date-fns": "catalog:",
-    "embla-carousel-vue": "^8.6.0",
-    "lucide-vue-next": "^0.511.0",
-    "nuxt": "^3.17.4",
-    "reka-ui": "catalog:",
-    "tailwind-merge": "^3.3.0",
-    "tailwindcss": "^4.1.7",
-    "tw-animate-css": "^1.3.0",
-    "vaul-vue": "catalog:",
-    "vee-validate": "catalog:",
-    "vue": "catalog:",
-    "vue-router": "^4.5.1",
-    "vue-sonner": "catalog:",
-    "zod": "catalog:"
-  },
-  "devDependencies": {
-    "@nuxtjs/color-mode": "^3.5.2",
-    "vue-tsc": "^2.2.10"
+    "dev": "pnpm -C packages/worker dev",
+    "build": "pnpm -C packages/ui-nuxt build && pnpm -C packages/worker build",
+    "deploy": "pnpm -C packages/ui-nuxt build && pnpm -C packages/worker deploy",
+    "lint": "eslint .",
+    "default-branch": "git remote show origin | sed -n '/HEAD branch/s/.*: //p'"
   }
 }

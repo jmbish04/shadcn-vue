@@ -1,0 +1,39 @@
+{
+  "name": "ui-nuxt",
+  "private": true,
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi generate",
+    "preview": "nuxi preview"
+  },
+  "dependencies": {
+    "@internationalized/date": "^3.8.2",
+    "@nuxt/fonts": "0.11.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "@tanstack/vue-table": "^8.21.3",
+    "@unovis/ts": "^1.5.2",
+    "@unovis/vue": "^1.5.2",
+    "@vee-validate/zod": "^4.15.1",
+    "@vueuse/core": "^13.6.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
+    "embla-carousel-vue": "^8.6.0",
+    "lucide-vue-next": "^0.511.0",
+    "nuxt": "^3.18.1",
+    "reka-ui": "^2.4.1",
+    "tailwind-merge": "^3.3.0",
+    "tailwindcss": "^4.1.7",
+    "tw-animate-css": "^1.3.0",
+    "vaul-vue": "^0.4.1",
+    "vee-validate": "^4.15.1",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1",
+    "vue-sonner": "^2.0.2",
+    "zod": "^4.0.17"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^3.5.2",
+    "vue-tsc": "^2.2.10"
+  }
+}

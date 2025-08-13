@@ -1,75 +1,37 @@
-# Nuxt Minimal Starter
+# Cloudflare Worker MCP Tool
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repo contains a Nuxt 3 single-page application and a Cloudflare Worker built with Hono. The Worker serves the UI as static assets and exposes a small API, forming a minimal MCP-style tool that can run entirely on Cloudflare's edge.
 
 ## Setup
 
-Make sure to install dependencies:
-
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Development
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+pnpm -C packages/ui-nuxt dev      # run the Nuxt dev server
+pnpm -C packages/worker dev       # develop the Worker
 ```
 
-## Production
-
-Build the application for production:
+## Build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+pnpm -C packages/ui-nuxt build    # generate static assets
+pnpm -C packages/worker build     # bundle worker with wrangler
 ```
 
-Locally preview production build:
+## Deployment
 
 ```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+pnpm deploy                       # build UI then deploy worker
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Testing
+
+```bash
+pnpm -C packages/worker test
+```
+
+The Worker is configured via `packages/worker/wrangler.toml` and uses Node 22 and Wrangler v4.

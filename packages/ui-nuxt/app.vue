@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { Toaster } from '@/registry/new-york-v4/ui/sonner'
-
 const activeTheme = useCookie<string>('active_theme', { readonly: true })
 const isScaled = computed(() => !!activeTheme.value?.endsWith('-scaled'))
 const colorMode = useColorMode()
@@ -18,6 +16,6 @@ const colorMode = useColorMode()
       <NuxtPage />
     </NuxtLayout>
 
-    <Toaster :theme="colorMode.preference as any || 'system'" />
+    <ClientOnly><Toaster :theme="colorMode.preference as any || 'system'" /></ClientOnly>
   </Body>
 </template>

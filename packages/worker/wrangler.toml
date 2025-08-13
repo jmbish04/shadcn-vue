@@ -1,0 +1,11 @@
+name = "cloudflare-api-token-manager"
+main = "src/index.ts"
+compatibility_date = "2025-08-01"
+
+[assets]
+directory = "../ui-nuxt/.output/public"
+binding = "ASSETS"
+not_found_handling = "none"
+
+[vars]
+NODE_ENV = "production"
